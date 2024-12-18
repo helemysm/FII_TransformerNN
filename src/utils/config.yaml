@@ -1,0 +1,45 @@
+dataset:
+  attdata_path: 'attention_w.pkl'
+  data_path: '/user/yhelem/storage/exo_images/dataset_injection/'
+  injected: True
+  checkpoint_path: '/user/yhelem/storage/exo_images/models/'
+modelparam:  
+  layers: 2
+  n_heads: 4
+  emb_dim: 512
+  factor : 4
+  dropout_rate: 0.1
+  n_class: 1
+  num_random: 30
+  window_size: 10
+  pooling_layer: 'mean'
+  mask: False
+  centroids: True
+  background: True
+  name_study: '80_clF_norm11_inj_womirror'
+embedding:
+  kernel_sizes: [1,2,2]
+hyperparameters:
+  lr: 0.001
+timeseries:
+  seq_lenght: 1000
+  in_feature: 3
+  batch_size_train: 120
+  batch_size_val: 40
+  batch_size_test: 1
+  injection: True
+type_pe:
+  no_pe: False
+  abs_pe: False
+  time_pe: False
+  pe: True
+training:
+  epochs: 500
+  steps_per_epoch: 350
+  comet: ''
+  api_key: 'api_key'
+  api_key_wandb: 'api_key'
+  name_wandb: ''
+  name_result_txt: ''
+  cl_loss: False
+  lambda_value: 0.15
