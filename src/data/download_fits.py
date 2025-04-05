@@ -17,7 +17,7 @@ output_prefix = '/user/yhelem/storage/exo_images/dataset_fits_candidate_exofop/'
 
 df = pd.read_csv('/user/yhelem/storage/exo_images/TOIS.csv')
 
-df = df[df['TFOPWG Disposition'] == 'PC']
+df = df[df['TFOPWG Disposition'].isin(['CP', 'KP'])].copy() 
 
 def get_sectors(sectors_str):
     row_sectors = np.array(sectors_str.split(','), dtype=int)
